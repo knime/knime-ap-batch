@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.knime.ap.batch">
+   <implementation class="org.knime.ap.batch.BatchExecutorImpl"/>
+   <service>
+      <provide interface="org.knime.product.headless.IBatchExecutor"/>
+   </service>
+</scr:component>

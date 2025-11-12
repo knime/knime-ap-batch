@@ -1,0 +1,7 @@
+autoEnabled=false
+bindingSuggestionsDisabled=false
+eclipse.preferences.version=1
+idePrefixKey=src
+projectKey=KNIME_knime-ap-batch
+serverId=SonarCloud
+sqPrefixKey=org.knime.ap.batch

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.knime.features.ap.batch">
+      <category name="knime-ap-batch"/>
+   </feature>
+   <feature id="org.knime.features.ap.batch.source">
+      <category name="knime-ap-batch"/>
+   </feature>
+   <category-def name="knime-ap-batch" label="Build artifacts from knime-ap-batch">
+      <description>
+         Build artifacts from knime-ap-batch
+      </description>
+   </category-def>
+</site>

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Unit-Tests for org.knime.ap.batch
+Bundle-SymbolicName: org.knime.ap.batch.tests;singleton:=true
+Bundle-Version: 5.9.0.qualifier
+Bundle-Vendor: KNIME AG, Zurich, Switzerland
+Fragment-Host: org.knime.ap.batch;bundle-version="[5.9.0,6.0.0)"
+Require-Bundle: junit-jupiter-api;bundle-version="[5.12.2,6.0.0)",
+ junit-jupiter-params;bundle-version="[5.12.2,6.0.0)",
+ org.apache.commons.lang3;bundle-version="[3.18.0,4.0.0)",
+ org.hamcrest.core;bundle-version="[2.2.0,3.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: org.knime.ap.batch.tests
+Bundle-ClassPath: .
