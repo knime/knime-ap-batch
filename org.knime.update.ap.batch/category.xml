@@ -6,9 +6,9 @@
    <feature id="org.knime.features.ap.batch.source">
       <category name="knime-ap-batch"/>
    </feature>
-   <category-def name="knime-ap-batch" label="Build artifacts from knime-ap-batch">
+   <category-def name="knime-ap-batch" label="KNIME Batch Execution">
       <description>
-         Build artifacts from knime-ap-batch
+         Commandline execution of KNIME workflows
       </description>
    </category-def>
 </site>
