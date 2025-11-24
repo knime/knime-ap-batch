@@ -13,16 +13,23 @@ properties([
 ])
 
 try {
-    knimetools.defaultTychoBuild('org.knime.update.ap.batch')
+    timeout(time: 2, unit: 'HOURS') {
+        node('maven && java21') {
+            echo "Running on ${env.NODE_NAME}"
+            withEnv(['SKIP_COMPOSITES=true']) {
+                knimetools.defaultTychoBuild(updateSiteProject: 'org.knime.update.ap.batch')
+            }
 
-    stage('Sonarqube analysis') {
-        env.lastStage = env.STAGE_NAME
-        workflowTests.runSonar()
+            stage('Sonarqube analysis') {
+                env.lastStage = env.STAGE_NAME
+                workflowTests.runSonar(withOutNode: true)
+            }
+        }
     }
 } catch (ex) {
     currentBuild.result = 'FAILURE'
     throw ex
 } finally {
-    notifications.notifyBuild(currentBuild.result);
+    notifications.notifyBuild(currentBuild.result)
 }
 /* vim: set shiftwidth=4 expandtab smarttab: */
